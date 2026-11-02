@@ -7,5 +7,13 @@
 <body>
     <h1>じゃんけんゲーム開始</h1>
     <p th:if="${name}">Hi <span th:text="${name}">名前</span></p>
+    <a href="/jankengame?hand=Gu">グー</a>
+    <a href="/jankengame?hand=Ch">チョキ</a>
+    <a href="/jankengame?hand=Pa">パー</a>
+    <div th:if="${janken}">
+        あなたの手：[[${janken.userHand}]]
+        相手の手：[[${janken.cpuHand}]]
+        結果：[[${janken.result}]]
+    </div>
 </body>
 </html>
